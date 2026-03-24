@@ -190,12 +190,12 @@ function installMcp(base, platform) {
 // --- CLI ---
 
 const args = process.argv.slice(2);
-const isGlobal = args.includes('--global');
+const isLocal = args.includes('--local');
 const skillOnly = args.includes('--skill');
 const mcpOnly = args.includes('--mcp');
 const autoYes = args.includes('--yes') || args.includes('-y');
 
-const base = isGlobal ? homedir() : process.cwd();
+const base = isLocal ? process.cwd() : homedir();
 
 // Banner
 console.log();
@@ -203,12 +203,12 @@ console.log(`  ${chalk.hex('#8b5cf6')('useful')} ${chalk.dim('ai')}`);
 console.log();
 
 // Detect
-const detected = detect(base, isGlobal);
+const detected = detect(base, !isLocal);
 
 if (detected.length === 0) {
-  console.log(chalk.dim('  No agent platforms detected in this directory.'));
-  if (!isGlobal) {
-    console.log(chalk.dim('  Try --global to scan your home directory.'));
+  console.log(chalk.dim('  No agent platforms detected.'));
+  if (isLocal) {
+    console.log(chalk.dim('  Try without --local to scan your home directory.'));
   }
   console.log();
   process.exit(0);

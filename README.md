@@ -48,8 +48,8 @@ $ npx useful-ai
 ## Options
 
 ```bash
-npx useful-ai              # Install in current project
-npx useful-ai --global     # Install to home directory (all projects)
+npx useful-ai              # Scans home directory, installs to detected platforms
+npx useful-ai --local      # Install in current project directory instead
 npx useful-ai --skill      # Skill file only, skip prompts
 npx useful-ai --mcp        # MCP config only, skip prompts
 npx useful-ai -y           # Accept all defaults (skill file, all platforms)
