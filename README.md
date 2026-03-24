@@ -1,6 +1,6 @@
 # useful-ai
 
-One command to connect your AI agents to 140+ tools.
+One command to connect your AI agents to 200+ tools.
 
 ```bash
 npx useful-ai
@@ -30,7 +30,7 @@ $ npx useful-ai
   ✓ Installed skill to .cursor/skills/useful-ai/SKILL.md
   ✓ Installed skill to .vscode/skills/useful-ai/SKILL.md
 
-  Your agents can now use 140+ tools from usefulai.fun
+  Your agents can now use 200+ tools from usefulai.fun
 ```
 
 ## Supported platforms
@@ -57,9 +57,9 @@ npx useful-ai -y           # Accept all defaults (skill file, all platforms)
 
 ## What gets installed
 
-**Skill file** (recommended): A markdown file that teaches your agent how to call 140+ tools via the Useful AI dispatch API. Dropped into your platform's skills directory.
+**Skill file** (recommended): A markdown file that teaches your agent how to call 200+ tools via the Useful AI dispatch API. Dropped into your platform's skills directory.
 
-**MCP server**: Adds the Useful AI MCP endpoint to your platform's config. Your agent gets `useful` and `suggest` as native tools.
+**MCP server**: Adds the Useful AI MCP endpoint to your platform's config. Your agent gets a dynamic, auto-updating list of named tools (20+) plus a dispatch catch-all for 200+ more. The tool list refreshes based on real usage data.
 
 Both are free, no auth required.
 
